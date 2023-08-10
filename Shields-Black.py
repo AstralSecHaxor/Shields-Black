@@ -10,14 +10,7 @@ import time
 import sys
 import random
 from time import sleep
-import platform
-def clear ( ):
-	if platform.system( ) == 'Windows':
-		os.system("cls")
-	elif platform.system( ) == 'Linux':
-		os.system("clear")
-	else:
-		os.system ("clear")
+
 #===================================#
 W='\033[1;32m'
 A='\033[1;33m'
