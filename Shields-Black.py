@@ -580,7 +580,7 @@ while True:
             elif type == 0:
             	while True:
             	  clear ( )
-            		banner ()
+            	  banner ()
             		print(f" {V}Coloque os detalhes do número.\n Código do país [sem o +]")
             		cdp =input (f"""{az}
 ┌──({usuario}{P}㉿{G}Termux)-[{P}Shields-Black/SHELDRES-SMS{az}]
