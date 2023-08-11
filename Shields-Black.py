@@ -579,7 +579,7 @@ while True:
             	print()
             elif type == 0:
             	while True:
-            		clear ( )
+            	  clear ( )
             		banner ()
             		print(f" {V}Coloque os detalhes do número.\n Código do país [sem o +]")
             		cdp =input (f"""{az}
