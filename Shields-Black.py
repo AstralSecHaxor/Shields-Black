@@ -84,6 +84,7 @@ while True:
     
     if opcao == "a":
             def Packs():
+            	os.system("clear")
             	banner = open("Imgs/packs")
             	print(banner.read ())
             	#selec = input("Digite sua opçao ->")
@@ -578,50 +579,50 @@ while True:
             	print("Ferramenta De mensagem anonimas")
             	print()
             elif type == 0:
-            	while True:
-            	  clear ( )
-            	  banner ()
-            		print(f" {V}Coloque os detalhes do número.\n Código do país [sem o +]")
-            		cdp =input (f"""{az}
+              while True:
+                os.system("clear")
+                banner ()
+                print(f" {V}Coloque os detalhes do número.\n Código do país [sem o +]")
+                cdp =input (f"""{az}
 ┌──({usuario}{P}㉿{G}Termux)-[{P}Shields-Black/SHELDRES-SMS{az}]
 └─$ """)
-            		if '+' in cdp:
+                if '+' in cdp:
             		        tc = list(cdp)
             		        tc.remove('+')
             		        cdp = ''.join(tc)
             		        cdp = cc.strip()
-            		if len(cdp) >= 4 or len(cdp) < 1:
+                if len(cdp) >= 4 or len(cdp) < 1:
             		        print(f'\n{P}Codigo invalido..{A}\nGeralmente eles possuem 1 a 3 digitos..{D}.\n')
             		        sleep (2)
             		        continue
-            		print(f"{az}Digite [DDD + NÚMERO]")
-            		pn = input (f"""{az}
+                print(f"{az}Digite [DDD + NÚMERO]")
+                pn = input (f"""{az}
 ┌──({usuario}{P}㉿{G}Termux)-[{P}Shieazs-Black/SHELDRES-SMS{az}]
 └─$ +{cdp} """)
-            		if len(pn) <= 6:
+                if len(pn) <= 6:
             		        print(f'\n{P} Numero invalido\n')
             		        sleep(2)
-            		        clear ( )
+            		        os.system("clear")
             		        continue
-            		numbe = cdp + pn
-            		if not numbe.isdigit():
+                numbe = cdp + pn
+                if not numbe.isdigit():
             		            print('\n\nNumero de telefone tem que ter somente numeros\n')
             		            sleep(3)
             		            clear ( )
             		            continue
-            		receiver = '+' + numbe
-            		print(f"{az} Digite sua mensagem para ~~> +{cdp} {pn}")
-            		text = input (f"""{az}
+                receiver = '+' + numbe
+                print(f"{az} Digite sua mensagem para ~~> +{cdp} {pn}")
+                text = input (f"""{az}
 ┌──({usuario}{P}㉿{G}Termux)-[{P}Shields-Black/SHELDRES-SMS{az}]
 └─$ """)
-            		try:
+                try:
             		    
                 		resp = requests.post('https://textbelt.com/text',{
                 			'phone' : receiver,
                 			'message' : text ,
                 			'key' : 'textbelt'
             		})
-            		except UnboundLocalError as erro:
+                except UnboundLocalError as erro:
             		    print ("="*36)
             		    print (f"{P}DEU ERRO EM ALGO :( POR FAVOR ATUALIZAR SUA BIBLIOTECA REQUESTS!! \nDESEJA ATUALIZAR ? [Y/N]")
             		   # atlz = input ("~~~> ")
@@ -646,23 +647,23 @@ while True:
             		            exit ()
             		        nao_atualiza()
             		        
-            		print(resp.json ())
-            		print(f'{VM}Obrigado por testa Sheldres-sms, Você só podera enviar outro sms após 24horas :)')
-            		print(f"{H}[ 99 ] ~> Para voltar ao menu Inicial.\n[ 00 ] ~> Sai do programa.")
-            		sleep (3)
-            		break
-            		print ("MENSAGEM ENVIADA COM SUCESSO! ")
-            		if '"success" : true 'in resp.text:
+                print(resp.json ())
+                print(f'{VM}Obrigado por testa Sheldres-sms, Você só podera enviar outro sms após 24horas :)')
+                print(f"{H}[ 99 ] ~> Para voltar ao menu Inicial.\n[ 00 ] ~> Sai do programa.")
+                sleep (3)
+                break
+                print ("MENSAGEM ENVIADA COM SUCESSO! ")
+                if '"success" : true 'in resp.text:
             		    print(f"{V}mensagem enviada com susseso!")
             		    
-            		print(f"{P}ERRO SUA MENSAGEM NÃO FOI ENVIADA! :(")
-            		if '"success" : false ' in resp.text:
+                print(f"{P}ERRO SUA MENSAGEM NÃO FOI ENVIADA! :(")
+                if '"success" : false ' in resp.text:
             		    print(f"{VM}Vish deu ruin em algo")
             		    print(f"\{VM} Falha no envio ")
             		    input('presione enter para sair')
             		    banner()
             		    exit()
-            		exit() 
+                exit() 
         sheldres_sms()
     elif opcao =="c":
         def distribuicoes():
