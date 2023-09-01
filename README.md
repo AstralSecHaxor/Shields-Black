@@ -1,6 +1,6 @@
 ---
-___Obs:___ O Social-Black foi criado para roda na Plataforma Do Termux...
-
+___Obs:___ A AstralSecHaxor A.S.H
+está criando um projeto chamado KitSec 
 ```bash
 apt update -y && pkg upgrade -y
 
